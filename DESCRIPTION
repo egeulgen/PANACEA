@@ -1,0 +1,15 @@
+Package: PANACEA
+Title: Personalized Network-based Anti-Cancer Therapy Appointment
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Ege",
+           family = "Ulgen",
+           role = c("aut", "cre", "cph"),
+           email = "egeulgen@gmail.com",
+           comment = c(ORCID = "0000-0003-2090-3621"))
+Maintainer: Ege Ulgen <egeulgen@gmail.com>
+Description: What the package does (one paragraph).
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
