@@ -7,4 +7,4 @@ test_that("RWR scoring works", {
                                       drug_interactions_df = sel_interactions_df,
                                       W_mat = W_mat),
                 "double")
-ss})
+})
