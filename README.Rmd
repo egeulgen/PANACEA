@@ -13,8 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# PANACEA: Personalized Network-based Anti-Cancer Therapy Appointment
-
+# PANACEA: Personalized Network-based Anti-Cancer Therapy Evaluation
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/egeulgen/PANACEA/workflows/R-CMD-check/badge.svg)](https://github.com/egeulgen/PANACEA/actions)
 <!-- badges: end -->

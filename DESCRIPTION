@@ -1,5 +1,5 @@
 Package: PANACEA
-Title: Personalized Network-based Anti-Cancer Therapy Appointment
+Title: Personalized Network-based Anti-Cancer Therapy Evaluation
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Ege",

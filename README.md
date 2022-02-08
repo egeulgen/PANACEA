@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# PANACEA: Personalized Network-based Anti-Cancer Therapy Appointment
+# PANACEA: Personalized Network-based Anti-Cancer Therapy Evaluation
 
 <!-- badges: start -->
 
