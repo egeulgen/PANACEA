@@ -12,6 +12,10 @@ network_propagation(prior_vec, W_prime, alpha, max.iter = 1000, eps = 1e-04)
 \item{W_prime}{(Laplacian-normalized, symmetric) adjacency matrix}
 
 \item{alpha}{restart parameter, controlling trade-off between prior information and network smoothing}
+
+\item{max.iter}{maximum allowed numbe of iterations (default = 1000)}
+
+\item{eps}{epsilon value to assess the L2 norm of the difference between iterations (default = 1e-4)}
 }
 \value{
 vector of propagation values

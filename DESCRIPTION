@@ -27,7 +27,8 @@ Imports:
     org.Hs.eg.db,
     DBI,
     NetPreProc,
-    igraph
+    igraph,
+    reshape2
 Suggests: 
     testthat (>= 3.0.0),
     driveR (>= 0.3.0)
@@ -35,3 +36,4 @@ Config/testthat/edition: 3
 Depends: 
     R (>= 2.10)
 LazyData: true
+LazyDataCompression: xz

@@ -31,5 +31,4 @@
 #' Symmetric matrix containing example adjacency data
 #'
 #' @format matrix of 84 rows and 84 columns
-#' }
 "toy_W_mat"

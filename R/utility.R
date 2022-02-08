@@ -83,6 +83,8 @@ convert2alias <- function(input_genes, target_genes) {
 #' @param prior_vec vector of prior knowledge on selected genes (names are gene symbols)
 #' @param W_prime (Laplacian-normalized, symmetric) adjacency matrix
 #' @param alpha restart parameter, controlling trade-off between prior information and network smoothing
+#' @param max.iter maximum allowed numbe of iterations (default = 1000)
+#' @param eps epsilon value to assess the L2 norm of the difference between iterations (default = 1e-4)
 #'
 #' @details Implementing RWR following the two publications below:
 #'  Cowen L, Ideker T, Raphael BJ, Sharan R. Network propagation: a universal amplifier of genetic associations. Nat Rev Genet. 2017 Sep;18(9):551–62.

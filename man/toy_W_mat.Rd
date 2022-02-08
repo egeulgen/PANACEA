@@ -7,7 +7,6 @@
 \format{
 matrix of 84 rows and 84 columns
 }
-}
 \usage{
 toy_W_mat
 }
