@@ -32,3 +32,14 @@
 #'
 #' @format matrix of 84 rows and 84 columns
 "toy_W_mat"
+
+#' Example driveR Result
+#'
+#' Data frame containing 'driveR' results for a lung adenocarcinoma case.
+#' @format a data frame containing 106 rows and 3 varibles:
+#' \describe{
+#'   \item{gene_symbol}{HGNC gene symbol}
+#'   \item{driverness_prob}{'driverness' probability}
+#'   \item{prediction}{driveR's prediction for whether the gene is a 'driver' or 'non-driver'}
+#' }
+"example_driveR_res"
