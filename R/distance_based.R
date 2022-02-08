@@ -15,7 +15,7 @@
 #'
 #' @examples
 #' toy_data <- data.frame(gene_symbol = c("TP53", "EGFR", "KDR", "ATM"),
-#' driverness_prob = c(0.94, 0.92, 0.84, 0.72))
+#'                        driverness_prob = c(0.94, 0.92, 0.84, 0.72))
 #' toy_interactions <- DGIdb_interactions_df[1:100, ]
 #' res <- score_drugs_distance_based(driveR_res = toy_data,
 #'                                   drug_interactions_df = toy_interactions,
