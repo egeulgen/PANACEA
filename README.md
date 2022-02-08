@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# PANACEA: Personalized Network-based Anti-Cancer Therapy Evaluation
+# <img src="https://github.com/egeulgen/PANACEA/blob/master/inst/extdata/PANACEA_logo.png?raw=true" align="left" height=150/> PANACEA: Personalized Network-based Anti-Cancer Therapy Evaluation
 
 <!-- badges: start -->
 
