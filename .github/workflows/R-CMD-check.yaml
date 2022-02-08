@@ -39,7 +39,7 @@ jobs:
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
 
-      -name: Install system dependencies
+      - name: Install system dependencies
         if: runner.os == 'Windows'
         run: |
         install.packages("RCurl", pkgType = "binary")
