@@ -22,7 +22,7 @@ jobs:
           - {os: windows-latest, r: 'release'}
           - {os: ubuntu-latest,   r: 'devel', http-user-agent: 'release'}
           - {os: ubuntu-latest,   r: 'release'}
-          - {os: ubuntu-latest,   r: '4.1'}
+          - {os: ubuntu-latest,   r: '4.0.0'}
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -41,5 +41,5 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v1
         with:
-          extra-packages: any::rcmdcheck
+          extra-packages: rcmdcheck
       - uses: r-lib/actions/check-r-package@v1
