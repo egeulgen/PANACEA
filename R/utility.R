@@ -3,14 +3,11 @@
 #' @param W_mat adjacency matrix for the chosen PIN
 #' @param drug_target_interactions data frame containing (processed) drugs and target genes
 #' @param edge_weight edge weight for drug-target gene interaction (default = 1000)
-#' @param drug_name_col name of the column containing drug names (default = "drug_name")
-#' @param target_col name of the column containing drug targets (default = "converted_target_gene")
 #'
 #' @return adjacency matrix with the drugs added as nodes
-add_drugs_as_nodes <- function(W_mat, drug_target_interactions, edge_weight = 1000,
-                               drug_name_col = "drug_name", target_col = "converted_target_gene") {
+add_drugs_as_nodes <- function(W_mat, drug_target_interactions, edge_weight = 1000) {
 
-    all_drugs <- unique(drug_target_interactions[, drug_name_col])
+    all_drugs <- unique(drug_target_interactions$drug_name)
 
     # add drugs to rows
     tmp <- matrix(0, nrow = length(all_drugs), ncol = ncol(W_mat), dimnames = list(all_drugs, colnames(W_mat)))
@@ -22,7 +19,7 @@ add_drugs_as_nodes <- function(W_mat, drug_target_interactions, edge_weight = 10
 
     # add edge weights
     for (drug in all_drugs) {
-        tmp <- drug_target_interactions[drug_target_interactions$drug_name == drug, target_col]
+        tmp <- drug_target_interactions$converted_target_gene[drug_target_interactions$drug_name == drug]
         i <- match(tmp, rownames(W_mat))
         j <- which(colnames(W_mat) == drug)
         W_mat[i, j] <-  W_mat[j, i] <- edge_weight
@@ -132,8 +129,9 @@ network_propagation <- function(prior_vec, W_prime, alpha, max.iter = 1000, eps 
 #' symbols missing in the PIN, merging drugs that have the same target gene(s)
 process_drug_target_interactions <- function(drug_target_interactions, PIN_genes,
                                              drug_name_col = "drug_name", target_col = "gene_name") {
-    ### Select necessary columns
+    ### Select and rename necessary columns
     drug_target_interactions <- drug_target_interactions[, c(drug_name_col, target_col)]
+    colnames(drug_target_interactions) <- c("drug_name", "gene_name")
 
     ### Convert to alias symbols within PIN, effectively removing drugs with no target genes within the PIN
     tmp <- unique(drug_target_interactions$gene_name)
@@ -164,4 +162,23 @@ process_drug_target_interactions <- function(drug_target_interactions, PIN_genes
 
     drug_target_interactions <- unique(drug_target_interactions)
     return(drug_target_interactions)
+}
+
+#' Turn Adjacency List into Adjacency Matrix
+#'
+#' @param adj_list Adjacency list
+#'
+#' @return Adjacency matrix
+adj_list2mat <- function(adj_list) {
+    ### add reverse interactions (so that the edge-weights matrix is symmetric)
+    tmp <- adj_list[, c(2, 1, 3)]
+    colnames(tmp) <- c("protein1", "protein2", "combined_score")
+    adj_list <- rbind(adj_list, tmp)
+    adj_list <- unique(adj_list)
+
+    ### Create adjacency matrix
+    W_mat <- reshape2::acast(adj_list, protein1~protein2, value.var = "combined_score")
+    W_mat[is.na(W_mat)] <- 0
+
+    return(W_mat)
 }

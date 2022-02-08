@@ -27,3 +27,8 @@ test_that("Drug interaction processing works") {
     expect_type(res <- PANACEA:::process_drug_target_interactions(tmp_interactions_df, genes), "list")
     expect_equal(nrow(res), nrow(tmp_interactions_df))
 }
+
+test_that("`adj_list2mat` works") {
+    adj_list <- STRING_adj_df[1:1e4, ]
+    expect_true(isSymmetric.matrix(PANACEA:::adj_list2mat(adj_list)))
+}

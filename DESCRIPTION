@@ -26,7 +26,12 @@ BugReports: https://github.com/egeulgen/PANACEA/issues
 Imports:
     org.Hs.eg.db,
     DBI,
-    NetPreProc
+    NetPreProc,
+    igraph
 Suggests: 
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    driveR (>= 0.3.0)
 Config/testthat/edition: 3
+Depends: 
+    R (>= 2.10)
+LazyData: true

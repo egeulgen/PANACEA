@@ -4,13 +4,7 @@
 \alias{add_drugs_as_nodes}
 \title{Add Drugs as Nodes}
 \usage{
-add_drugs_as_nodes(
-  W_mat,
-  drug_target_interactions,
-  edge_weight = 1000,
-  drug_name_col = "drug_name",
-  target_col = "converted_target_gene"
-)
+add_drugs_as_nodes(W_mat, drug_target_interactions, edge_weight = 1000)
 }
 \arguments{
 \item{W_mat}{adjacency matrix for the chosen PIN}
@@ -18,10 +12,6 @@ add_drugs_as_nodes(
 \item{drug_target_interactions}{data frame containing (processed) drugs and target genes}
 
 \item{edge_weight}{edge weight for drug-target gene interaction (default = 1000)}
-
-\item{drug_name_col}{name of the column containing drug names (default = "drug_name")}
-
-\item{target_col}{name of the column containing drug targets (default = "converted_target_gene")}
 }
 \value{
 adjacency matrix with the drugs added as nodes
