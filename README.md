@@ -17,9 +17,9 @@ prioritization approaches utilizing network methods. The methods utilize
 personalized “driverness” scores from
 [`driveR`](https://egeulgen.github.io/driveR/) to rank drugs, mapping
 these onto a protein-protein interaction network. The “distance-based”
-method scores each drug based on these scores an distances between drugs
-and genes to rank given drugs. The “RWR” method propagates these scores
-via a random-walk with restart framework to rank the drugs.
+method scores each drug based on these scores and distances between
+drugs and genes to rank given drugs. The “RWR” method propagates these
+scores via a random-walk with restart framework to rank the drugs.
 
 ## Installation
 

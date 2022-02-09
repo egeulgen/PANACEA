@@ -1,4 +1,39 @@
+destination: docs
 url: https://egeulgen.github.io/PANACEA/
 template:
   bootstrap: 5
-
+  bootswatch: journal
+news:
+- one_page: false
+reference:
+  - title: "PANACEA"
+    desc: >
+      PANACEA package
+    contents:
+      - PANACEA
+  - title: "Main functions"
+    desc: >
+      Main functions of PANACEA
+    contents:
+      - score_drugs
+      - score_drugs_distance_based
+      - score_drugs_RWR_based
+  - title: "Utility Functions"
+    desc: >
+      Utility functions
+    contents:
+      - add_drugs_as_nodes
+      - convert2alias
+      - network_propagation
+      - process_drug_target_interactions
+      - adj_list2mat
+  - title: "Built-in Data"
+    desc: >
+      Data within the package
+    contents:
+      - DGIdb_interactions_df
+      - STRING_adj_df
+      - toy_W_mat
+      - example_driveR_res
+      - example_scores_dist
+      - example_scores_RWR
