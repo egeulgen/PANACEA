@@ -15,8 +15,7 @@ test_that("Wrapper funcion works", {
                             method = "RWR"),
                 "double")
 
+    # invalid method and check for defaults
     expect_error(score_drugs(driveR_res = example_driveR_res,
-                             drug_interactions_df = sel_interactions_df,
-                             W_mat = W_mat,
                              method = "INVALID"))
 })
