@@ -9,7 +9,7 @@ Authors@R:
            comment = c(ORCID = "0000-0003-2090-3621"))
 Maintainer: Ege Ulgen <egeulgen@gmail.com>
 Description: Identification of the most appropriate pharmacotherapy for each 
-    patient based on genomic events is a major challenge in personalized 
+    patient based on genomic alterations is a major challenge in personalized 
     oncology. 'PANACEA' is a collection of personalized anti-cancer drug 
     prioritization approaches utilizing network methods. The methods utilize 
     personalized "driverness" scores from 'driveR' to rank drugs, mapping these
@@ -29,8 +29,12 @@ Imports: org.Hs.eg.db,
     NetPreProc,
     igraph,
     reshape2
-Suggests: testthat (>= 3.0.0)
+Suggests: 
+    rmarkdown,
+    knitr,
+    testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Depends: R (>= 4.0)
 LazyData: true
 LazyDataCompression: xz
+VignetteBuilder: knitr

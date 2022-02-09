@@ -43,3 +43,18 @@
 #'   \item{prediction}{driveR's prediction for whether the gene is a 'driver' or 'non-driver'}
 #' }
 "example_driveR_res"
+
+
+#' Example PANACEA "distance-based" Method Result
+#'
+#' Vector containing 'PANACEA' "distance-based" results for a lung adenocarcinoma case.
+#' Names are drug names, values are scores
+#' @format named vector of 1426 values
+"example_scores_dist"
+
+#' Example PANACEA "RWR" Method Result
+#'
+#' Vector containing 'PANACEA' "RWR" results for a lung adenocarcinoma case.
+#' Names are drug names, values are scores
+#' @format named vector of 1426 values
+"example_scores_RWR"

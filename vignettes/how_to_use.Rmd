@@ -1,0 +1,79 @@
+---
+title: "How to use PANACEA"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{How to use PANACEA}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+# Overview
+
+Identification of the most appropriate pharmacotherapy for each patient based on genomic alterations is a major challenge in personalized oncology. `PANACEA` is a collection of personalized anti-cancer drug prioritization approaches utilizing network methods. The methods utilize personalized "driverness" scores from [`driveR`](https://egeulgen.github.io/driveR/) to rank drugs, mapping these onto a protein-protein interaction network (PIN). The "distance-based" method scores each drug based on these scores an distances between drugs and genes to rank given drugs. The "RWR" method propagates these scores via a random-walk with restart framework to rank the drugs.
+
+The wrapper function `score_drugs()` can be used to score and rank drugs for an individual tumor sample via the "distance-based" or "RWR" method. The required inputs are:
+
+- `driveR_res`: data frame of `[driveR](https://egeulgen.github.io/driveR/)` results
+- `drug_interactions_df`: data frame of drug-gene interactions (defaults to interactions from DGIdb expert-curated sources)
+- `W_mat`: (symmetric) adjacency matrix for the PIN (defaults to STRING v11.5 interactions with combined score > .4)
+- `method`: scoring method (one of 'distance-based' or 'RWR')
+
+```{r setup}
+library(PANACEA)
+```
+
+# "Distance-based" Method
+
+For this method, the score between a drug, d, and an altered gene, g, is defined as:
+
+$$score(g, d) = \frac{1}{(dist(g,d) + 1)^2} driver\_prob_g$$
+where $dist(g,d)$ is the distance between g and d within the PIN, and $driver\_prob_g$ is the driverness probabilty obtained from `driveR`.
+
+The final score for a drug is calculated as the average of the scores between each altered gene and d:
+
+$$score(d) = \sum_{g \in G} \frac{1}{|G|} score(g,d)$$
+where G is the set of all altered genes.
+
+Scoring of drugs for the example lung adenocarcinoma case `example_driveR_res` via this "distance-based" method can be performed as follows:
+
+```{r dst_based, eval=FALSE}
+example_scores_dist <- score_drugs(example_driveR_res, method = "distance-based")
+```
+
+```{r save1, echo=FALSE, eval=FALSE}
+usethis::use_data(example_scores_dist)
+```
+
+This scores and ranks drugs via the "distance-based" method using drug-gene interactions from DGIdb expert-curated sources and the STRING v11.5 PIN with combined score > .4. Below, top 10 drugs are printed:
+
+```{r dist_based2}
+head(example_scores_dist, 10)
+```
+
+# "RWR" Method
+
+For this method, a random-walk with restart framework is used to propagate the driverness probabilities. A drug's final score is its final propagation score.
+
+Scoring of drugs for the example lung adenocarcinoma case `example_driveR_res` via this "RWR" method can be performed as follows:
+
+```{r dst_based, eval=FALSE}
+example_scores_RWR <- score_drugs(example_driveR_res, method = "RWR")
+```
+
+```{r save1, echo=FALSE, eval=FALSE}
+usethis::use_data(example_scores_RWR)
+```
+
+This scores and ranks drugs via the "RWR" method using drug-gene interactions from DGIdb expert-curated sources and the STRING v11.5 PIN with combined score > .4. Below, top 10 drugs are printed:
+
+```{r dist_based2}
+head(example_scores_RWR, 10)
+```

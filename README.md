@@ -11,8 +11,8 @@
 <!-- badges: end -->
 
 Identification of the most appropriate pharmacotherapy for each patient
-based on genomic events is a major challenge in personalized oncology.
-`PANACEA` is a collection of personalized anti-cancer drug
+based on genomic alterations is a major challenge in personalized
+oncology. `PANACEA` is a collection of personalized anti-cancer drug
 prioritization approaches utilizing network methods. The methods utilize
 personalized “driverness” scores from
 [`driveR`](https://egeulgen.github.io/driveR/) to rank drugs, mapping
@@ -45,3 +45,6 @@ The required inputs are:
     network (defaults to STRING v11.5 interactions with combined score >
     .4)
 -   `method`: scoring method (one of ‘distance-based’ or ‘RWR’)
+
+For detailed information on how to use `PANACEA`, please see the
+vignette “How to use PANACEA” via `vignette("how_to_use")`
