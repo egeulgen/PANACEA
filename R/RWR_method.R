@@ -32,7 +32,7 @@ score_drugs_RWR_based <- function(driveR_res, drug_interactions_df, W_mat,
 
      ### process adj. mat.
     if (verbose)
-        cat("Processing adjacency matrixs\n")
+        cat("Processing adjacency matrix\n")
     W_mat <- add_drugs_as_nodes(W_mat, processed_interactions_df)
     W_prime <- NetPreProc::Laplacian.norm(W_mat)
 
