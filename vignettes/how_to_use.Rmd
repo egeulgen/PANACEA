@@ -64,16 +64,16 @@ For this method, a random-walk with restart framework is used to propagate the d
 
 Scoring of drugs for the example lung adenocarcinoma case `example_driveR_res` via this "RWR" method can be performed as follows:
 
-```{r dst_based, eval=FALSE}
+```{r RWR, eval=FALSE}
 example_scores_RWR <- score_drugs(example_driveR_res, method = "RWR")
 ```
 
-```{r save1, echo=FALSE, eval=FALSE}
+```{r save2, echo=FALSE, eval=FALSE}
 usethis::use_data(example_scores_RWR)
 ```
 
 This scores and ranks drugs via the "RWR" method using drug-gene interactions from DGIdb expert-curated sources and the STRING v11.5 PIN with combined score > .4. Below, top 10 drugs are printed:
 
-```{r dist_based2}
+```{r RWR2}
 head(example_scores_RWR, 10)
 ```
