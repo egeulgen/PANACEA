@@ -4,13 +4,7 @@
 \alias{score_drugs}
 \title{Scoring of Drugs via Network-based Methods}
 \usage{
-score_drugs(
-  driveR_res,
-  drug_interactions_df = DGIdb_interactions_df,
-  W_mat,
-  method,
-  ...
-)
+score_drugs(driveR_res, drug_interactions_df, W_mat, method, ...)
 }
 \arguments{
 \item{driveR_res}{data frame of driveR results}

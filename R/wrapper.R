@@ -37,10 +37,15 @@
 #'                    drug_interactions_df = toy_interactions,
 #'                    W_mat = toy_W_mat,
 #'                    method = "distance-based", verbose = FALSE)
-score_drugs <- function(driveR_res, drug_interactions_df = DGIdb_interactions_df, W_mat,
+score_drugs <- function(driveR_res, drug_interactions_df, W_mat,
                         method, ...) {
+
+    if (missing(drug_interactions_df)) {
+        drug_interactions_df <- DGIdb_interactions_df
+    }
+
     if (missing(W_mat)) {
-        W_mat <- adj_list2mat(STRING_adj_df)
+        W_mat <- adj_list2mat(adj_list = STRING_adj_df)
     }
 
     ### score drugs
