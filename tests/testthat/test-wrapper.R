@@ -9,11 +9,6 @@ test_that("Wrapper funcion works", {
                             W_mat = W_mat,
                             method = "distance-based"),
                 "double")
-    expect_type(score_drugs(driveR_res = example_driveR_res,
-                            drug_interactions_df = sel_interactions_df,
-                            W_mat = W_mat,
-                            method = "RWR"),
-                "double")
 
     expect_error(score_drugs(driveR_res = example_driveR_res,
                              drug_interactions_df = sel_interactions_df,
