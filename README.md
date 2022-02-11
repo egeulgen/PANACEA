@@ -23,6 +23,9 @@ method scores each drug based on these scores and distances between
 drugs and genes to rank given drugs. The “RWR” method propagates these
 scores via a random-walk with restart framework to rank the drugs.
 
+![PANACEA
+workflow](https://github.com/egeulgen/PANACEA/blob/master/inst/extdata/workflow.png?raw=true "PANACEA workflow")
+
 ## Installation
 
 You can install the development version of PANACEA from
