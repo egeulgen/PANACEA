@@ -43,13 +43,16 @@ for an individual tumor sample via the ‘distance-based’ or ‘RWR’ method.
 The required inputs are:
 
 -   `driveR_res`: data frame of
-    `[driveR](https://egeulgen.github.io/driveR/)` results
+    [driveR](https://egeulgen.github.io/driveR/) results. Details on how
+    to obtain `driveR` output are provided in [this
+    vignette](https://egeulgen.github.io/driveR/articles/how_to_use.html)
 -   `drug_interactions_df`: data frame of drug-gene interactions
     (defaults to interactions from DGIdb expert-curated sources)
 -   `W_mat`: (symmetric) adjacency matrix for the protein interaction
-    network (defaults to STRING v11.5 interactions with combined score >
-    .4)
+    network (defaults to STRING v11.5 interactions with combined score
+    \> .4)
 -   `method`: scoring method (one of ‘distance-based’ or ‘RWR’)
 
 For detailed information on how to use `PANACEA`, please see the
-vignette “How to use PANACEA” via `vignette("how_to_use")`
+vignette “How to use PANACEA” via `vignette("how_to_use")` or visit
+[this link](https://egeulgen.github.io/PANACEA/articles/how_to_use.html)

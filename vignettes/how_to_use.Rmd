@@ -21,7 +21,7 @@ Identification of the most appropriate pharmacotherapy for each patient based on
 
 The wrapper function `score_drugs()` can be used to score and rank drugs for an individual tumor sample via the "distance-based" or "RWR" method. The required inputs are:
 
-- `driveR_res`: data frame of `[driveR](https://egeulgen.github.io/driveR/)` results
+- `driveR_res`: data frame of [driveR](https://egeulgen.github.io/driveR/) results. Details on how to obtain `driveR` output are provided in [this vignette](https://egeulgen.github.io/driveR/articles/how_to_use.html)
 - `drug_interactions_df`: data frame of drug-gene interactions (defaults to interactions from DGIdb expert-curated sources)
 - `W_mat`: (symmetric) adjacency matrix for the PIN (defaults to STRING v11.5 interactions with combined score > .4)
 - `method`: scoring method (one of 'distance-based' or 'RWR')
