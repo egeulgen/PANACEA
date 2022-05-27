@@ -42,7 +42,7 @@
     
     <a class="navbar-brand me-2" href="index.html">PANACEA</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9001</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,7 +84,6 @@
 <img src="https://github.com/egeulgen/PANACEA/blob/master/inst/extdata/PANACEA_logo.png?raw=true" align="left" height="150/"> PANACEA: Personalized Network-based Anti-Cancer Therapy Evaluation<a class="anchor" aria-label="anchor" href="#-panacea-personalized-network-based-anti-cancer-therapy-evaluation"></a>
 </h1></div>
 <!-- badges: start -->
-
 <p>Identification of the most appropriate pharmacotherapy for each patient based on genomic alterations is a major challenge in personalized oncology. <code>PANACEA</code> is a collection of personalized anti-cancer drug prioritization approaches utilizing network methods. The methods utilize personalized “driverness” scores from <a href="https://egeulgen.github.io/driveR/" class="external-link"><code>driveR</code></a> to rank drugs, mapping these onto a protein-protein interaction network. The “distance-based” method scores each drug based on these scores and distances between drugs and genes to rank given drugs. The “RWR” method propagates these scores via a random-walk with restart framework to rank the drugs.</p>
 <div class="figure">
 <img src="https://github.com/egeulgen/PANACEA/blob/master/inst/extdata/workflow.png?raw=true" title="PANACEA workflow" alt=""><p class="caption">PANACEA workflow</p>
@@ -103,7 +102,8 @@
 <p>The wrapper function <code><a href="reference/score_drugs.html">score_drugs()</a></code> can be used to score and rank drugs for an individual tumor sample via the ‘distance-based’ or ‘RWR’ method. The required inputs are:</p>
 <ul>
 <li>
-<code>driveR_res</code>: data frame of <code>[driveR](https://egeulgen.github.io/driveR/)</code> results</li>
+<code>driveR_res</code>: data frame of <a href="https://egeulgen.github.io/driveR/" class="external-link">driveR</a> results. Details on how to obtain <code>driveR</code> output are provided in <a href="https://egeulgen.github.io/driveR/articles/how_to_use.html" class="external-link">this vignette</a>
+</li>
 <li>
 <code>drug_interactions_df</code>: data frame of drug-gene interactions (defaults to interactions from DGIdb expert-curated sources)</li>
 <li>
@@ -111,7 +111,7 @@
 <li>
 <code>method</code>: scoring method (one of ‘distance-based’ or ‘RWR’)</li>
 </ul>
-<p>For detailed information on how to use <code>PANACEA</code>, please see the vignette “How to use PANACEA” via <code><a href="articles/how_to_use.html">vignette("how_to_use")</a></code></p>
+<p>For detailed information on how to use <code>PANACEA</code>, please see the vignette “How to use PANACEA” via <code><a href="articles/how_to_use.html">vignette("how_to_use")</a></code> or visit <a href="https://egeulgen.github.io/PANACEA/articles/how_to_use.html">this link</a></p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
@@ -166,7 +166,7 @@
 
 <div class="pkgdown-footer-right">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
 </div>
 
     </footer>
