@@ -96,6 +96,20 @@
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/egeulgen/PANACEA" class="external-link">PANACEA</a></span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
+<h2 id="example-input">Example Input<a class="anchor" aria-label="anchor" href="#example-input"></a>
+</h2>
+<p>In this vignette, driveR results for a lung adenocarcinoma case, <code>example_driveR_res</code>, is used as the example input dataset. Details on how to obtain <code>driveR</code> output are provided in <a href="https://egeulgen.github.io/driveR/articles/how_to_use.html" class="external-link">this vignette</a>.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">example_driveR_res</span><span class="op">)</span>
+<span class="co">#&gt;   gene_symbol driverness_prob prediction</span>
+<span class="co">#&gt; 1       IFNA7      0.18945527 non-driver</span>
+<span class="co">#&gt; 2        TJP1      0.13935021 non-driver</span>
+<span class="co">#&gt; 3      IL20RA      0.09266710 non-driver</span>
+<span class="co">#&gt; 4        SOST      0.08017132 non-driver</span>
+<span class="co">#&gt; 5       NCOA2      0.06734062 non-driver</span>
+<span class="co">#&gt; 6        ARAF      0.06232757 non-driver</span></code></pre></div>
+</div>
+<div class="section level2">
 <h2 id="distance-based-method">“Distance-based” Method<a class="anchor" aria-label="anchor" href="#distance-based-method"></a>
 </h2>
 <p>For this method, the score between a drug, d, and an altered gene, g, is defined as:</p>
@@ -103,10 +117,10 @@
 <p>The final score for a drug is calculated as the average of the scores between each altered gene and d:</p>
 <p><span class="math display">\[score(d) = \sum_{g \in G} \frac{1}{|G|} score(g,d)\]</span> where G is the set of all altered genes.</p>
 <p>Scoring of drugs for the example lung adenocarcinoma case <code>example_driveR_res</code> via this “distance-based” method can be performed as follows:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">example_scores_dist</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/score_drugs.html">score_drugs</a></span><span class="op">(</span><span class="va">example_driveR_res</span>, method <span class="op">=</span> <span class="st">"distance-based"</span><span class="op">)</span></code></pre></div>
 <p>This scores and ranks drugs via the “distance-based” method using drug-gene interactions from DGIdb expert-curated sources and the STRING v11.5 PIN with combined score &gt; .4. Below, top 10 drugs are printed:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">example_scores_dist</span>, <span class="fl">10</span><span class="op">)</span>
 <span class="co">#&gt;     CISPLATIN     SORAFENIB   REGORAFENIB       AT-9283     ENMD-2076 </span>
 <span class="co">#&gt;    0.01169096    0.01118784    0.01118784    0.01114538    0.01104143 </span>
@@ -118,10 +132,10 @@
 </h2>
 <p>For this method, a random-walk with restart framework is used to propagate the driverness probabilities. A drug’s final score is its final propagation score.</p>
 <p>Scoring of drugs for the example lung adenocarcinoma case <code>example_driveR_res</code> via this “RWR” method can be performed as follows:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">example_scores_RWR</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/score_drugs.html">score_drugs</a></span><span class="op">(</span><span class="va">example_driveR_res</span>, method <span class="op">=</span> <span class="st">"RWR"</span><span class="op">)</span></code></pre></div>
 <p>This scores and ranks drugs via the “RWR” method using drug-gene interactions from DGIdb expert-curated sources and the STRING v11.5 PIN with combined score &gt; .4. Below, top 10 drugs are printed:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">example_scores_RWR</span>, <span class="fl">10</span><span class="op">)</span>
 <span class="co">#&gt;     BLOSOZUMAB;ROMOSOZUMAB                    KRN-330 </span>
 <span class="co">#&gt;               0.0004660692               0.0002192862 </span>
