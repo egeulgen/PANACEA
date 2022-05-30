@@ -33,7 +33,7 @@ You can install the development version of PANACEA from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("egeulgen/PANACEA")
+devtools::install_github("egeulgen/PANACEA", build_vignettes = TRUE)
 ```
 
 ## Usage
