@@ -28,13 +28,17 @@ workflow](https://github.com/egeulgen/PANACEA/blob/master/inst/extdata/workflow.
 
 ## Installation
 
-You can install the development version of PANACEA from
-[GitHub](https://github.com/) with:
+You can install the development version of PANACEA from GitHub with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("egeulgen/PANACEA", build_vignettes = TRUE)
 ```
+
+> IMPORTANT NOTE: CRAN archived NetPreProc (one of the dependencies) on
+> 2022-06-06. Therefore, this package has to be installed from source,
+> which can be found on the CRAN archive here:
+> <https://cran.r-project.org/src/contrib/Archive/NetPreProc/>
 
 ## Usage
 
