@@ -27,6 +27,7 @@ reference:
       - network_propagation
       - process_drug_target_interactions
       - adj_list2mat
+      = Laplacian.norm
   - title: "Built-in Data"
     desc: >
       Data within the package
