@@ -8,8 +8,8 @@
 <meta name="description" content="PANACEA">
 <title>How to use PANACEA • PANACEA</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link href="../deps/bootstrap-5.1.3/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.1.3/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="How to use PANACEA">
 <meta property="og:description" content="PANACEA">
@@ -26,7 +26,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">PANACEA</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9001</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9002</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +66,7 @@
 
 
 <script src="how_to_use_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
-  <main id="main"><div class="page-header">
+  <main id="main" class="col-md-9"><div class="page-header">
       <img src="" class="logo" alt=""><h1>How to use PANACEA</h1>
             
       
@@ -93,21 +93,21 @@
 <code>method</code>: scoring method (one of ‘distance-based’ or ‘RWR’)</li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/egeulgen/PANACEA" class="external-link">PANACEA</a></span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/egeulgen/PANACEA" class="external-link">PANACEA</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="example-input">Example Input<a class="anchor" aria-label="anchor" href="#example-input"></a>
 </h2>
 <p>In this vignette, driveR results for a lung adenocarcinoma case, <code>example_driveR_res</code>, is used as the example input dataset. Details on how to obtain <code>driveR</code> output are provided in <a href="https://egeulgen.github.io/driveR/articles/how_to_use.html" class="external-link">this vignette</a>.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">example_driveR_res</span><span class="op">)</span>
-<span class="co">#&gt;   gene_symbol driverness_prob prediction</span>
-<span class="co">#&gt; 1       IFNA7      0.18945527 non-driver</span>
-<span class="co">#&gt; 2        TJP1      0.13935021 non-driver</span>
-<span class="co">#&gt; 3      IL20RA      0.09266710 non-driver</span>
-<span class="co">#&gt; 4        SOST      0.08017132 non-driver</span>
-<span class="co">#&gt; 5       NCOA2      0.06734062 non-driver</span>
-<span class="co">#&gt; 6        ARAF      0.06232757 non-driver</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">example_driveR_res</span><span class="op">)</span></span>
+<span><span class="co">#&gt;   gene_symbol driverness_prob prediction</span></span>
+<span><span class="co">#&gt; 1       IFNA7      0.18945527 non-driver</span></span>
+<span><span class="co">#&gt; 2        TJP1      0.13935021 non-driver</span></span>
+<span><span class="co">#&gt; 3      IL20RA      0.09266710 non-driver</span></span>
+<span><span class="co">#&gt; 4        SOST      0.08017132 non-driver</span></span>
+<span><span class="co">#&gt; 5       NCOA2      0.06734062 non-driver</span></span>
+<span><span class="co">#&gt; 6        ARAF      0.06232757 non-driver</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="distance-based-method">“Distance-based” Method<a class="anchor" aria-label="anchor" href="#distance-based-method"></a>
@@ -118,14 +118,14 @@
 <p><span class="math display">\[score(d) = \sum_{g \in G} \frac{1}{|G|} score(g,d)\]</span> where G is the set of all altered genes.</p>
 <p>Scoring of drugs for the example lung adenocarcinoma case <code>example_driveR_res</code> via this “distance-based” method can be performed as follows:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">example_scores_dist</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/score_drugs.html">score_drugs</a></span><span class="op">(</span><span class="va">example_driveR_res</span>, method <span class="op">=</span> <span class="st">"distance-based"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">example_scores_dist</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/score_drugs.html">score_drugs</a></span><span class="op">(</span><span class="va">example_driveR_res</span>, method <span class="op">=</span> <span class="st">"distance-based"</span><span class="op">)</span></span></code></pre></div>
 <p>This scores and ranks drugs via the “distance-based” method using drug-gene interactions from DGIdb expert-curated sources and the STRING v11.5 PIN with combined score &gt; .4. Below, top 10 drugs are printed:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">example_scores_dist</span>, <span class="fl">10</span><span class="op">)</span>
-<span class="co">#&gt;     CISPLATIN     SORAFENIB   REGORAFENIB       AT-9283     ENMD-2076 </span>
-<span class="co">#&gt;    0.01169096    0.01118784    0.01118784    0.01114538    0.01104143 </span>
-<span class="co">#&gt; PEMBROLIZUMAB   NIMOTUZUMAB     CETUXIMAB     SIROLIMUS     SUNITINIB </span>
-<span class="co">#&gt;    0.01104143    0.01104143    0.01104143    0.01104143    0.01104143</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">example_scores_dist</span>, <span class="fl">10</span><span class="op">)</span></span>
+<span><span class="co">#&gt;     CISPLATIN     SORAFENIB   REGORAFENIB       AT-9283     ENMD-2076 </span></span>
+<span><span class="co">#&gt;    0.01169096    0.01118784    0.01118784    0.01114538    0.01104143 </span></span>
+<span><span class="co">#&gt; PEMBROLIZUMAB   NIMOTUZUMAB     CETUXIMAB     SIROLIMUS     SUNITINIB </span></span>
+<span><span class="co">#&gt;    0.01104143    0.01104143    0.01104143    0.01104143    0.01104143</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="rwr-method">“RWR” Method<a class="anchor" aria-label="anchor" href="#rwr-method"></a>
@@ -133,20 +133,20 @@
 <p>For this method, a random-walk with restart framework is used to propagate the driverness probabilities. A drug’s final score is its final propagation score.</p>
 <p>Scoring of drugs for the example lung adenocarcinoma case <code>example_driveR_res</code> via this “RWR” method can be performed as follows:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">example_scores_RWR</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/score_drugs.html">score_drugs</a></span><span class="op">(</span><span class="va">example_driveR_res</span>, method <span class="op">=</span> <span class="st">"RWR"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">example_scores_RWR</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/score_drugs.html">score_drugs</a></span><span class="op">(</span><span class="va">example_driveR_res</span>, method <span class="op">=</span> <span class="st">"RWR"</span><span class="op">)</span></span></code></pre></div>
 <p>This scores and ranks drugs via the “RWR” method using drug-gene interactions from DGIdb expert-curated sources and the STRING v11.5 PIN with combined score &gt; .4. Below, top 10 drugs are printed:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">example_scores_RWR</span>, <span class="fl">10</span><span class="op">)</span>
-<span class="co">#&gt;     BLOSOZUMAB;ROMOSOZUMAB                    KRN-330 </span>
-<span class="co">#&gt;               0.0004660692               0.0002192862 </span>
-<span class="co">#&gt;                  SERELAXIN LY-3009120;MLN-2480;XL-281 </span>
-<span class="co">#&gt;               0.0002041091               0.0001850910 </span>
-<span class="co">#&gt;                ENCORAFENIB    TIAGABINE HYDROCHLORIDE </span>
-<span class="co">#&gt;               0.0001692383               0.0001683831 </span>
-<span class="co">#&gt;                OCRIPLASMIN                REGORAFENIB </span>
-<span class="co">#&gt;               0.0001412958               0.0001408705 </span>
-<span class="co">#&gt;                 TRAMETINIB                  SORAFENIB </span>
-<span class="co">#&gt;               0.0001407725               0.0001386259</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">example_scores_RWR</span>, <span class="fl">10</span><span class="op">)</span></span>
+<span><span class="co">#&gt;     BLOSOZUMAB;ROMOSOZUMAB                    KRN-330 </span></span>
+<span><span class="co">#&gt;               0.0004660692               0.0002192862 </span></span>
+<span><span class="co">#&gt;                  SERELAXIN LY-3009120;MLN-2480;XL-281 </span></span>
+<span><span class="co">#&gt;               0.0002041091               0.0001850910 </span></span>
+<span><span class="co">#&gt;                ENCORAFENIB    TIAGABINE HYDROCHLORIDE </span></span>
+<span><span class="co">#&gt;               0.0001692383               0.0001683831 </span></span>
+<span><span class="co">#&gt;                OCRIPLASMIN                REGORAFENIB </span></span>
+<span><span class="co">#&gt;               0.0001412958               0.0001408705 </span></span>
+<span><span class="co">#&gt;                 TRAMETINIB                  SORAFENIB </span></span>
+<span><span class="co">#&gt;               0.0001407725               0.0001386259</span></span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
@@ -161,7 +161,7 @@
 
 <div class="pkgdown-footer-right">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
     </footer>
