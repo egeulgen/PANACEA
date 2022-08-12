@@ -13,7 +13,7 @@ test_that("adding drugs to PIN works", {
 
 test_that("RWR works", {
     tmp_W_mat <- matrix(400, nrow = 4, ncol = 4, dimnames = list(paste0("G", 1:4), paste0("G", 1:4)))
-    tmp_W_mat_prime <- NetPreProc::Laplacian.norm(tmp_W_mat)
+    tmp_W_mat_prime <- Laplacian.norm(tmp_W_mat)
     expect_type(res <- PANACEA:::network_propagation(c(G1 = 1, G4 = 1), tmp_W_mat_prime, 0.8), "list")
     expect_equal(length(res$p), nrow(tmp_W_mat_prime))
 })

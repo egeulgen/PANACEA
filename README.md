@@ -35,12 +35,6 @@ You can install the development version of PANACEA from GitHub with:
 devtools::install_github("egeulgen/PANACEA", build_vignettes = TRUE)
 ```
 
-> IMPORTANT NOTE: CRAN archived NetPreProc (one of the dependencies) on
-> 2022-06-06. Therefore, while we look for a workaround for this issue,
-> NetPreProc has to be installed from source, which can be found on the
-> CRAN archive here:
-> <https://cran.r-project.org/src/contrib/Archive/NetPreProc/>
-
 ## Usage
 
 The wrapper function `score_drugs()` can be used to score and rank drugs

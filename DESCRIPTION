@@ -1,6 +1,6 @@
 Package: PANACEA
 Title: Personalized Network-based Anti-Cancer Therapy Evaluation
-Version: 0.0.0.9001
+Version: 0.0.0.9002
 Authors@R: 
     person(given = "Ege",
            family = "Ulgen",
@@ -20,14 +20,13 @@ Description: Identification of the most appropriate pharmacotherapy for each
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
 URL: https://github.com/egeulgen/PANACEA,
     https://egeulgen.github.io/PANACEA/
 BugReports: https://github.com/egeulgen/PANACEA/issues
 biocViews:
 Imports: org.Hs.eg.db,
     DBI,
-    NetPreProc,
     igraph,
     reshape2
 Suggests: 
