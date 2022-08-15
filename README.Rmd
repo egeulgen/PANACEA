@@ -45,4 +45,6 @@ The wrapper function `score_drugs()` can be used to score and rank drugs for an 
 - `W_mat`: (symmetric) adjacency matrix for the protein interaction network (defaults to STRING v11.5 interactions with combined score > .4)
 - `method`: scoring method (one of 'distance-based' or 'RWR')
 
+## Example Usage
+
 For detailed information on how to use `PANACEA`, please see the vignette "How to use PANACEA" via `vignette("how_to_use")` or visit [this link](https://egeulgen.github.io/PANACEA/articles/how_to_use.html)

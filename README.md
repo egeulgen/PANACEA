@@ -52,6 +52,8 @@ The required inputs are:
     \> .4)
 -   `method`: scoring method (one of ‘distance-based’ or ‘RWR’)
 
+## Example Usage
+
 For detailed information on how to use `PANACEA`, please see the
 vignette “How to use PANACEA” via `vignette("how_to_use")` or visit
 [this link](https://egeulgen.github.io/PANACEA/articles/how_to_use.html)
