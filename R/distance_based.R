@@ -40,7 +40,7 @@ score_drugs_distance_based <- function(driveR_res, drug_interactions_df, W_mat,
     all_drugs <- unique(processed_interactions_df$drug_name)
 
     ### process driveR results
-    driveR_res <- driveR_res[driveR_res$driverness_prob > 0.05, ]
+    driveR_res <- driveR_res[driveR_res$driverness_prob > driver_prob_cutoff, ]
 
     driveR_res$gene_symbol <- convert2alias(driveR_res$gene_symbol, igraph::V(PIN)$name)
     driveR_res <- driveR_res[driveR_res$gene_symbol != "NOT_FOUND", ]
