@@ -1,0 +1,14 @@
+citHeader("To cite PANACEA in publications use:")
+
+citEntry(
+  entry    = "Article",
+  title    = "PANACEA: network-based methods for pharmacotherapy prioritization in personalized oncology",
+  author   = c(person("Ege","Ulgen"),
+             person("Ozan","Ozisik"),
+	           person(c("Osman", "Ugur"),"Sezerman")),
+  journal  = "Bioinformatics",
+  year     = 2023,
+
+  url      = "https://doi.org/10.1093/bioinformatics/btad022",
+  textVersion = "Ulgen E, Ozisik O, Sezerman OU. PANACEA: network-based methods for pharmacotherapy prioritization in personalized oncology. Bioinformatics. 2023 Jan 1;39(1):btad022. https://doi.org/10.1093/bioinformatics/btad022"
+)
