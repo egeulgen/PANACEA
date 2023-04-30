@@ -17,7 +17,9 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/egeulgen/PANACEA/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/egeulgen/PANACEA/actions/workflows/R-CMD-check.yaml) [![Codecov test coverage](https://codecov.io/gh/egeulgen/PANACEA/branch/master/graph/badge.svg)](https://app.codecov.io/gh/egeulgen/PANACEA?branch=master) [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT
+[![R-CMD-check](https://github.com/egeulgen/PANACEA/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/egeulgen/PANACEA/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/egeulgen/PANACEA/branch/master/graph/badge.svg)](https://app.codecov.io/gh/egeulgen/PANACEA?branch=master) 
+[![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- badges: end -->
 
 Identification of the most appropriate pharmacotherapy for each patient based on genomic alterations is a major challenge in personalized oncology. `PANACEA` is a collection of personalized anti-cancer drug prioritization approaches utilizing network methods. The methods utilize personalized "driverness" scores from [`driveR`](https://egeulgen.github.io/driveR/) to rank drugs, mapping these onto a protein-protein interaction network. The "distance-based" method scores each drug based on these scores and distances between drugs and genes to rank given drugs. The "RWR" method propagates these scores via a random-walk with restart framework to rank the drugs.
