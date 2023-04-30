@@ -34,12 +34,13 @@
 #'   gene_symbol = c("TP53", "EGFR", "KDR", "ATM"),
 #'   driverness_prob = c(0.94, 0.92, 0.84, 0.72)
 #' )
-#' toy_interactions <- DGIdb_interactions_df[1:100, ]
+#' toy_interactions <- DGIdb_interactions_df[1:50, ]
 #' res <- score_drugs(
 #'   driveR_res = toy_data,
-#'   drug_interactions_df = toy_interactions,
-#'   W_mat = toy_W_mat,
-#'   method = "distance-based", verbose = FALSE
+#'   drug_interactions_df = toy_interactions, # leave blank for default
+#'   W_mat = toy_W_mat, # leave blank for default
+#'   method = "distance-based",
+#'   verbose = FALSE
 #' )
 score_drugs <- function(driveR_res, drug_interactions_df, W_mat, method, ...) {
   if (missing(drug_interactions_df)) {
