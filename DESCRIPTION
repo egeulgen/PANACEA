@@ -16,8 +16,8 @@ Description: Identification of the most appropriate pharmacotherapy for each
     onto a protein-protein interaction network. The "distance-based" method 
     scores each drug based on these scores and distances between drugs and genes
     to rank given drugs. The "RWR" method propagates these scores via a 
-    random-walk with restart framework to rank the drugs. The method is 
-    described in detail in *Ulgen E, Ozisik O, Sezerman OU. PANACEA: 
+    random-walk with restart framework to rank the drugs. The methods are 
+    described in detail in Ulgen E, Ozisik O, Sezerman OU. PANACEA: 
     network-based methods for pharmacotherapy prioritization in personalized 
     oncology. Bioinformatics. 2023 Jan 1;39(1):btad022. 
     <https://doi.org/10.1093/bioinformatics/btad022>
