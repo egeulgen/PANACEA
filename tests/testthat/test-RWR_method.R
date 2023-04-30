@@ -1,4 +1,4 @@
-test_that("RWR scoring works", {
+test_that("`score_drugs_RWR_based()` works as expected", {
     skip_on_cran()
     W_mat <- PANACEA:::adj_list2mat(STRING_adj_df[STRING_adj_df$combined_score > 995, ])
     selected_drugs <- unique(DGIdb_interactions_df$drug_name)[1:20]

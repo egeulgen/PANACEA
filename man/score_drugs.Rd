@@ -47,11 +47,15 @@ If the \code{W_mat} argument is not supplied, the built-in STRNG data
 \code{\link{STRING_adj_df}} is used to generate \code{W_mat}.
 }
 \examples{
-toy_data <- data.frame(gene_symbol = c("TP53", "EGFR", "KDR", "ATM"),
-                       driverness_prob = c(0.94, 0.92, 0.84, 0.72))
+toy_data <- data.frame(
+  gene_symbol = c("TP53", "EGFR", "KDR", "ATM"),
+  driverness_prob = c(0.94, 0.92, 0.84, 0.72)
+)
 toy_interactions <- DGIdb_interactions_df[1:100, ]
-res <- score_drugs(driveR_res = toy_data,
-                   drug_interactions_df = toy_interactions,
-                   W_mat = toy_W_mat,
-                   method = "distance-based", verbose = FALSE)
+res <- score_drugs(
+  driveR_res = toy_data,
+  drug_interactions_df = toy_interactions,
+  W_mat = toy_W_mat,
+  method = "distance-based", verbose = FALSE
+)
 }

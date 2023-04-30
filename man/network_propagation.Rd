@@ -24,7 +24,7 @@ vector of propagation values
 Network Propagation (Random-walk with Restart)
 }
 \details{
-Implementing RWR following the two publications below:
+Implementing RWR following the following publications:
 Cowen L, Ideker T, Raphael BJ, Sharan R. Network propagation: a universal amplifier of genetic associations. Nat Rev Genet. 2017 Sep;18(9):551–62.
 Shnaps O, Perry E, Silverbush D, Sharan R. Inference of personalized drug targets via network propagation. Pac Symp Biocomput. 2016;21:156–67.
 }

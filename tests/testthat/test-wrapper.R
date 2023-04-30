@@ -1,4 +1,4 @@
-test_that("Wrapper funcion works", {
+test_that("`score_drugs()` funcion works as expected", {
     skip_on_cran()
     toy_data <- data.frame(gene_symbol = c("TP53", "EGFR", "KDR", "ATM"),
                            driverness_prob = c(0.94, 0.92, 0.84, 0.72))

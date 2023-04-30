@@ -30,36 +30,42 @@
 #' @export
 #'
 #' @examples
-#' toy_data <- data.frame(gene_symbol = c("TP53", "EGFR", "KDR", "ATM"),
-#'                        driverness_prob = c(0.94, 0.92, 0.84, 0.72))
+#' toy_data <- data.frame(
+#'   gene_symbol = c("TP53", "EGFR", "KDR", "ATM"),
+#'   driverness_prob = c(0.94, 0.92, 0.84, 0.72)
+#' )
 #' toy_interactions <- DGIdb_interactions_df[1:100, ]
-#' res <- score_drugs(driveR_res = toy_data,
-#'                    drug_interactions_df = toy_interactions,
-#'                    W_mat = toy_W_mat,
-#'                    method = "distance-based", verbose = FALSE)
-score_drugs <- function(driveR_res, drug_interactions_df, W_mat,
-                        method, ...) {
+#' res <- score_drugs(
+#'   driveR_res = toy_data,
+#'   drug_interactions_df = toy_interactions,
+#'   W_mat = toy_W_mat,
+#'   method = "distance-based", verbose = FALSE
+#' )
+score_drugs <- function(driveR_res, drug_interactions_df, W_mat, method, ...) {
+  if (missing(drug_interactions_df)) {
+    drug_interactions_df <- DGIdb_interactions_df
+  }
 
-    if (missing(drug_interactions_df)) {
-        drug_interactions_df <- DGIdb_interactions_df
-    }
+  if (missing(W_mat)) {
+    W_mat <- adj_list2mat(adj_list = STRING_adj_df)
+  }
 
-    if (missing(W_mat)) {
-        W_mat <- adj_list2mat(adj_list = STRING_adj_df)
-    }
-
-    ### score drugs
-    if (method == "distance-based") {
-        all_drug_scores <- score_drugs_distance_based(driveR_res = driveR_res,
-                                                      drug_interactions_df = drug_interactions_df,
-                                                      W_mat = W_mat, ...)
-    } else if (method == "RWR") {
-        all_drug_scores <- score_drugs_RWR_based(driveR_res = driveR_res,
-                                                 drug_interactions_df = drug_interactions_df,
-                                                 W_mat = W_mat, ...)
-    } else {
-        stop("Method must be one of 'distance-based' or 'RWR'")
-    }
-    all_drug_scores <- sort(all_drug_scores, decreasing = TRUE)
-    return(all_drug_scores)
+  ### score drugs
+  if (method == "distance-based") {
+    all_drug_scores <- score_drugs_distance_based(
+      driveR_res = driveR_res,
+      drug_interactions_df = drug_interactions_df,
+      W_mat = W_mat, ...
+    )
+  } else if (method == "RWR") {
+    all_drug_scores <- score_drugs_RWR_based(
+      driveR_res = driveR_res,
+      drug_interactions_df = drug_interactions_df,
+      W_mat = W_mat, ...
+    )
+  } else {
+    stop("Method must be one of 'distance-based' or 'RWR'")
+  }
+  all_drug_scores <- sort(all_drug_scores, decreasing = TRUE)
+  return(all_drug_scores)
 }
