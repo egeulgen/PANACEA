@@ -5,11 +5,10 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/egeulgen/PANACEA/workflows/R-CMD-check/badge.svg)](https://github.com/egeulgen/PANACEA/actions)
+[![R-CMD-check](https://github.com/egeulgen/PANACEA/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/egeulgen/PANACEA/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/egeulgen/PANACEA/branch/master/graph/badge.svg)](https://app.codecov.io/gh/egeulgen/PANACEA?branch=master)
-[![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+\[![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)\](<https://opensource.org/licenses/MIT>
 <!-- badges: end -->
 
 Identification of the most appropriate pharmacotherapy for each patient
