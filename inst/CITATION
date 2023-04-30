@@ -1,7 +1,7 @@
 citHeader("To cite PANACEA in publications use:")
 
-citEntry(
-  entry    = "Article",
+bibentry(
+  bibtype  = "Article",
   title    = "PANACEA: network-based methods for pharmacotherapy prioritization in personalized oncology",
   author   = c(person("Ege","Ulgen"),
              person("Ozan","Ozisik"),
