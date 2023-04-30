@@ -30,6 +30,12 @@ The method is described in detail in *Ulgen E, Ozisik O, Sezerman OU. PANACEA: n
 
 ## Installation
 
+You can install the latest release version of PANACEA from CRAN via:
+
+``` r
+install.packages("PANACEA")
+```
+
 You can install the development version of PANACEA from GitHub with:
 
 ``` r

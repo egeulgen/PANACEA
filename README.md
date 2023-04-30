@@ -32,6 +32,12 @@ workflow](https://github.com/egeulgen/PANACEA/blob/master/inst/extdata/workflow.
 
 ## Installation
 
+You can install the latest release version of PANACEA from CRAN via:
+
+``` r
+install.packages("PANACEA")
+```
+
 You can install the development version of PANACEA from GitHub with:
 
 ``` r
