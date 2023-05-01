@@ -48,7 +48,7 @@ devtools::install_github("egeulgen/PANACEA", build_vignettes = TRUE)
 ## Usage
 
 The wrapper function `score_drugs()` can be used to score and rank drugs
-for an individual tumor sample via the ‘distance-based’ or ‘RWR’ method.
+for an individual tumor sample via the “distance-based” or “RWR” method.
 The required inputs are:
 
 - `driveR_res`: data frame of
@@ -60,7 +60,7 @@ The required inputs are:
 - `W_mat`: (symmetric) adjacency matrix for the protein interaction
   network (defaults to STRING v11.5 interactions with combined score \>
   .4)
-- `method`: scoring method (one of ‘distance-based’ or ‘RWR’)
+- `method`: scoring method (one of “distance-based” or “RWR”)
 
 ## Example Usage
 

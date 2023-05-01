@@ -85,7 +85,7 @@ convert2alias <- function(input_genes, target_genes) {
 #' @param prior_vec vector of prior knowledge on selected genes (names are gene symbols)
 #' @param W_prime (Laplacian-normalized, symmetric) adjacency matrix
 #' @param alpha restart parameter, controlling trade-off between prior information and network smoothing
-#' @param max.iter maximum allowed numbe of iterations (default = 1000)
+#' @param max.iter maximum allowed number of iterations (default = 1000)
 #' @param eps epsilon value to assess the L2 norm of the difference between iterations (default = 1e-4)
 #'
 #' @details Implementing RWR following the following publications:

@@ -24,7 +24,7 @@ The wrapper function `score_drugs()` can be used to score and rank drugs for an 
 - `driveR_res`: data frame of [driveR](https://egeulgen.github.io/driveR/) results. Details on how to obtain `driveR` output are provided in [this vignette](https://egeulgen.github.io/driveR/articles/how_to_use.html)
 - `drug_interactions_df`: data frame of drug-gene interactions (defaults to interactions from DGIdb expert-curated sources)
 - `W_mat`: (symmetric) adjacency matrix for the PIN (defaults to STRING v11.5 interactions with combined score > .4)
-- `method`: scoring method (one of 'distance-based' or 'RWR')
+- `method`: scoring method (one of "distance-based" or "RWR")
 
 ```{r setup}
 library(PANACEA)
@@ -43,7 +43,7 @@ head(example_driveR_res)
 For this method, the score between a drug, d, and an altered gene, g, is defined as:
 
 $$score(g, d) = \frac{1}{(dist(g,d) + 1)^2} driver\_prob_g$$
-where $dist(g,d)$ is the distance between g and d within the PIN, and $driver\_prob_g$ is the driverness probabilty obtained from `driveR`.
+where $dist(g,d)$ is the distance between g and d within the PIN, and $driver\_prob_g$ is the driverness probability obtained from `driveR`.
 
 The final score for a drug is calculated as the average of the scores between each altered gene and d:
 

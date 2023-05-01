@@ -6,7 +6,7 @@
 #' MyCancerGenomeClinicalTrial, TALC, TdgClinicalTrial, TEND)
 #' from DGIdb.
 #'
-#' @format a data frame containing 11323 rows and 2 varibles:
+#' @format a data frame containing 11323 rows and 2 variables:
 #' \describe{
 #'   \item{drug_name}{Drug name}
 #'   \item{gene_name}{HGNC gene symbol for the interacting gene}
@@ -18,7 +18,7 @@
 #' Data frame of adjacency list for STRING v11.5 interactions with combined
 #' score > 0.40 (medium confidence)
 #'
-#' @format a data frame with 887797 rows and 3 columns
+#' @format a data frame with 887797 rows and 3 variables:
 #' \describe{
 #'   \item{protein1}{Interactor 1}
 #'   \item{protein2}{Interactor 2}
@@ -36,7 +36,7 @@
 #' Example driveR Result
 #'
 #' Data frame containing 'driveR' results for a lung adenocarcinoma case.
-#' @format a data frame containing 106 rows and 3 varibles:
+#' @format a data frame containing 106 rows and 3 variables:
 #' \describe{
 #'   \item{gene_symbol}{HGNC gene symbol}
 #'   \item{driverness_prob}{'driverness' probability}

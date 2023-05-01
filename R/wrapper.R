@@ -5,7 +5,7 @@
 #' @param ... additional arguments for \code{\link{score_drugs_distance_based}} or
 #' \code{\link{score_drugs_RWR_based}}
 #'
-#' @details This is th wrapper function for the two proposed methods for
+#' @details This is the wrapper function for the two proposed methods for
 #' personalized scoring of drugs for individual cancer samples via network-based
 #' methods. The available methods are 'distance-based' and 'RWR'. For the
 #' 'distance-based' method, the score between a gene (g) and drug (d) is formulated

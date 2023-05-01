@@ -5,7 +5,7 @@
 \alias{DGIdb_interactions_df}
 \title{DGIdb Interactions Expert-curated Sources}
 \format{
-a data frame containing 11323 rows and 2 varibles:
+a data frame containing 11323 rows and 2 variables:
 \describe{
 \item{drug_name}{Drug name}
 \item{gene_name}{HGNC gene symbol for the interacting gene}

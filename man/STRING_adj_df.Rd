@@ -5,7 +5,7 @@
 \alias{STRING_adj_df}
 \title{Adjacency List for STRING v11.5}
 \format{
-a data frame with 887797 rows and 3 columns
+a data frame with 887797 rows and 3 variables:
 \describe{
 \item{protein1}{Interactor 1}
 \item{protein2}{Interactor 2}

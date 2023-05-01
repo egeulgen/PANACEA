@@ -5,7 +5,7 @@
 \alias{example_driveR_res}
 \title{Example driveR Result}
 \format{
-a data frame containing 106 rows and 3 varibles:
+a data frame containing 106 rows and 3 variables:
 \describe{
 \item{gene_symbol}{HGNC gene symbol}
 \item{driverness_prob}{'driverness' probability}
