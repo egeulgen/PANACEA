@@ -6,8 +6,7 @@
 * ubuntu-latest (on GitHub-Actions), R devel
 * ubuntu-latest (on GitHub-Actions), R 4.2.3
 * win-builder (devel and release)
-* Rhub - `rhub::check_for_cran()`, `rhub::check(platform = 'ubuntu-rchk')`, 
-  `rhub::check_with_sanitizers()`
+* Rhub
 
 ## R CMD check results
 There were no ERRORs, WARNINGs. 
