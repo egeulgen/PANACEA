@@ -13,10 +13,10 @@
 #' }
 "DGIdb_interactions_df"
 
-#' Adjacency List for STRING v11.5
+#' Adjacency List for STRING v11.5 - High Confidence Interactions
 #'
 #' Data frame of adjacency list for STRING v11.5 interactions with combined
-#' score > 0.40 (medium confidence)
+#' score > 700 (high confidence)
 #'
 #' @format a data frame with 887797 rows and 3 variables:
 #' \describe{
