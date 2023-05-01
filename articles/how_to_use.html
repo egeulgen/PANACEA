@@ -151,14 +151,14 @@ performed as follows:</p>
 <code class="sourceCode R"><span><span class="va">example_scores_dist</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/score_drugs.html">score_drugs</a></span><span class="op">(</span><span class="va">example_driveR_res</span>, method <span class="op">=</span> <span class="st">"distance-based"</span><span class="op">)</span></span></code></pre></div>
 <p>This scores and ranks drugs via the “distance-based” method using
 drug-gene interactions from DGIdb expert-curated sources and the STRING
-v11.5 PIN with combined score &gt; .4. Below, top 10 drugs are
+v11.5 PIN with combined score &gt; 700. Below, top 10 drugs are
 printed:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">example_scores_dist</span>, <span class="fl">10</span><span class="op">)</span></span>
-<span><span class="co">#&gt;     CISPLATIN     SORAFENIB   REGORAFENIB       AT-9283     ENMD-2076 </span></span>
-<span><span class="co">#&gt;    0.01169096    0.01118784    0.01118784    0.01114538    0.01104143 </span></span>
-<span><span class="co">#&gt; PEMBROLIZUMAB   NIMOTUZUMAB     CETUXIMAB     SIROLIMUS     SUNITINIB </span></span>
-<span><span class="co">#&gt;    0.01104143    0.01104143    0.01104143    0.01104143    0.01104143</span></span></code></pre></div>
+<span><span class="co">#&gt;    EVEROLIMUS PEMBROLIZUMAB     CISPLATIN     LETROZOLE     CETUXIMAB </span></span>
+<span><span class="co">#&gt;   0.009405251   0.008960906   0.008960906   0.008900282   0.008755715 </span></span>
+<span><span class="co">#&gt;  BICALUTAMIDE     SORAFENIB   ENCORAFENIB   REGORAFENIB    TRAMETINIB </span></span>
+<span><span class="co">#&gt;   0.008755715   0.008523904   0.008523904   0.008523904   0.008523904</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="rwr-method">“RWR” Method<a class="anchor" aria-label="anchor" href="#rwr-method"></a>
@@ -173,19 +173,19 @@ as follows:</p>
 <code class="sourceCode R"><span><span class="va">example_scores_RWR</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/score_drugs.html">score_drugs</a></span><span class="op">(</span><span class="va">example_driveR_res</span>, method <span class="op">=</span> <span class="st">"RWR"</span><span class="op">)</span></span></code></pre></div>
 <p>This scores and ranks drugs via the “RWR” method using drug-gene
 interactions from DGIdb expert-curated sources and the STRING v11.5 PIN
-with combined score &gt; .4. Below, top 10 drugs are printed:</p>
+with combined score &gt; 700. Below, top 10 drugs are printed:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">example_scores_RWR</span>, <span class="fl">10</span><span class="op">)</span></span>
-<span><span class="co">#&gt;     BLOSOZUMAB;ROMOSOZUMAB                    KRN-330 </span></span>
-<span><span class="co">#&gt;               0.0004660692               0.0002192862 </span></span>
-<span><span class="co">#&gt;                  SERELAXIN LY-3009120;MLN-2480;XL-281 </span></span>
-<span><span class="co">#&gt;               0.0002041091               0.0001850910 </span></span>
-<span><span class="co">#&gt;                ENCORAFENIB    TIAGABINE HYDROCHLORIDE </span></span>
-<span><span class="co">#&gt;               0.0001692383               0.0001683831 </span></span>
-<span><span class="co">#&gt;                OCRIPLASMIN                REGORAFENIB </span></span>
-<span><span class="co">#&gt;               0.0001412958               0.0001408705 </span></span>
-<span><span class="co">#&gt;                 TRAMETINIB                  SORAFENIB </span></span>
-<span><span class="co">#&gt;               0.0001407725               0.0001386259</span></span></code></pre></div>
+<span><span class="co">#&gt;               BLOSOZUMAB;ROMOSOZUMAB              TIAGABINE HYDROCHLORIDE </span></span>
+<span><span class="co">#&gt;                         0.0008476627                         0.0004770740 </span></span>
+<span><span class="co">#&gt;                              KRN-330                            SERELAXIN </span></span>
+<span><span class="co">#&gt;                         0.0004326723                         0.0003804546 </span></span>
+<span><span class="co">#&gt;                            TIAGABINE           LY-3009120;MLN-2480;XL-281 </span></span>
+<span><span class="co">#&gt;                         0.0003554924                         0.0002520392 </span></span>
+<span><span class="co">#&gt;                          OCRIPLASMIN                          ENCORAFENIB </span></span>
+<span><span class="co">#&gt;                         0.0002386693                         0.0002312123 </span></span>
+<span><span class="co">#&gt; COLLAGENASE CLOSTRIDIUM HISTOLYTICUM                              COCAINE </span></span>
+<span><span class="co">#&gt;                         0.0002245975                         0.0002227435</span></span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
