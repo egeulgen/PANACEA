@@ -60,7 +60,7 @@ example_scores_dist <- score_drugs(example_driveR_res, method = "distance-based"
 usethis::use_data(example_scores_dist)
 ```
 
-This scores and ranks drugs via the "distance-based" method using drug-gene interactions from DGIdb expert-curated sources and the STRING v11.5 PIN with combined score > .4. Below, top 10 drugs are printed:
+This scores and ranks drugs via the "distance-based" method using drug-gene interactions from DGIdb expert-curated sources and the STRING v11.5 PIN with combined score > 700. Below, top 10 drugs are printed:
 
 ```{r dist_based2}
 head(example_scores_dist, 10)
@@ -80,7 +80,7 @@ example_scores_RWR <- score_drugs(example_driveR_res, method = "RWR")
 usethis::use_data(example_scores_RWR)
 ```
 
-This scores and ranks drugs via the "RWR" method using drug-gene interactions from DGIdb expert-curated sources and the STRING v11.5 PIN with combined score > .4. Below, top 10 drugs are printed:
+This scores and ranks drugs via the "RWR" method using drug-gene interactions from DGIdb expert-curated sources and the STRING v11.5 PIN with combined score > 700. Below, top 10 drugs are printed:
 
 ```{r RWR2}
 head(example_scores_RWR, 10)

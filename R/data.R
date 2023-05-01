@@ -49,12 +49,12 @@
 #'
 #' Vector containing 'PANACEA' "distance-based" results for a lung adenocarcinoma case.
 #' Names are drug names, values are scores
-#' @format named vector of 1426 values
+#' @format named vector of 1423 values
 "example_scores_dist"
 
 #' Example PANACEA "RWR" Method Result
 #'
 #' Vector containing 'PANACEA' "RWR" results for a lung adenocarcinoma case.
 #' Names are drug names, values are scores
-#' @format named vector of 1426 values
+#' @format named vector of 1423 values
 "example_scores_RWR"

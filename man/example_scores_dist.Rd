@@ -5,7 +5,7 @@
 \alias{example_scores_dist}
 \title{Example PANACEA "distance-based" Method Result}
 \format{
-named vector of 1426 values
+named vector of 1423 values
 }
 \usage{
 example_scores_dist

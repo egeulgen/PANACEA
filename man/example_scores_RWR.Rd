@@ -5,7 +5,7 @@
 \alias{example_scores_RWR}
 \title{Example PANACEA "RWR" Method Result}
 \format{
-named vector of 1426 values
+named vector of 1423 values
 }
 \usage{
 example_scores_RWR
