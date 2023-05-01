@@ -108,8 +108,8 @@ sources)</li>
 <code>W_mat</code>: (symmetric) adjacency matrix for the PIN
 (defaults to STRING v11.5 interactions with combined score &gt; .4)</li>
 <li>
-<code>method</code>: scoring method (one of ‘distance-based’ or
-‘RWR’)</li>
+<code>method</code>: scoring method (one of “distance-based” or
+“RWR”)</li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/egeulgen/PANACEA" class="external-link">PANACEA</a></span><span class="op">)</span></span></code></pre></div>
@@ -139,7 +139,7 @@ is defined as:</p>
 <p><span class="math display">\[score(g, d) = \frac{1}{(dist(g,d) +
 1)^2} driver\_prob_g\]</span> where <span class="math inline">\(dist(g,d)\)</span> is the distance between g and d
 within the PIN, and <span class="math inline">\(driver\_prob_g\)</span>
-is the driverness probabilty obtained from <code>driveR</code>.</p>
+is the driverness probability obtained from <code>driveR</code>.</p>
 <p>The final score for a drug is calculated as the average of the scores
 between each altered gene and d:</p>
 <p><span class="math display">\[score(d) = \sum_{g \in G} \frac{1}{|G|}
