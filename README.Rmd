@@ -19,6 +19,7 @@ knitr::opts_chunk$set(
 
 [![R-CMD-check](https://github.com/egeulgen/PANACEA/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/egeulgen/PANACEA/actions/workflows/R-CMD-check.yaml)
 [![Codecov test coverage](https://codecov.io/gh/egeulgen/PANACEA/branch/master/graph/badge.svg)](https://app.codecov.io/gh/egeulgen/PANACEA?branch=master) 
+[![CRAN version](http://www.r-pkg.org/badges/version-ago/PANACEA)](https://cran.r-project.org/package=PANACEA)
 [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/mit/)
 <!-- badges: end -->
 
