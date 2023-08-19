@@ -13,6 +13,5 @@
 #' @seealso \code{\link{score_drugs}} for the wrapper function for scoring of
 #' drugs via network-based methods
 #'
-#' @docType package
 #' @name PANACEA
-NULL
+"_PACKAGE"

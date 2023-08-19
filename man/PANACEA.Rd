@@ -3,6 +3,7 @@
 \docType{package}
 \name{PANACEA}
 \alias{PANACEA}
+\alias{PANACEA-package}
 \title{PANACEA: Personalized Network-based Anti-Cancer Therapy Evaluation}
 \description{
 Identification of the most appropriate pharmacotherapy for each patient based
@@ -18,4 +19,8 @@ restart framework to rank the drugs.
 \seealso{
 \code{\link{score_drugs}} for the wrapper function for scoring of
 drugs via network-based methods
+}
+\author{
+\strong{Maintainer}: Ege Ulgen \email{egeulgen@gmail.com} (\href{https://orcid.org/0000-0003-2090-3621}{ORCID}) [copyright holder]
+
 }
