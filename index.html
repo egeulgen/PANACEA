@@ -96,10 +96,9 @@
 
 <p>Identification of the most appropriate pharmacotherapy for each patient based on genomic alterations is a major challenge in personalized oncology. <code>PANACEA</code> is a collection of personalized anti-cancer drug prioritization approaches utilizing network methods. The methods utilize personalized “driverness” scores from <a href="https://egeulgen.github.io/driveR/" class="external-link"><code>driveR</code></a> to rank drugs, mapping these onto a protein-protein interaction network. The “distance-based” method scores each drug based on these scores and distances between drugs and genes to rank given drugs. The “RWR” method propagates these scores via a random-walk with restart framework to rank the drugs.</p>
 <p>The method is described in detail in <em>Ulgen E, Ozisik O, Sezerman OU. PANACEA: network-based methods for pharmacotherapy prioritization in personalized oncology. Bioinformatics. 2023 Jan 1;39(1):btad022. <a href="https://doi.org/10.1093/bioinformatics/btad022" class="external-link uri">https://doi.org/10.1093/bioinformatics/btad022</a></em></p>
-<div class="figure">
-<img src="https://github.com/egeulgen/PANACEA/blob/master/inst/extdata/workflow.png?raw=true" title="PANACEA workflow" alt=""><p class="caption">PANACEA workflow</p>
-</div>
-<div class="section level2">
+<figure><img src="https://github.com/egeulgen/PANACEA/blob/master/inst/extdata/workflow.png?raw=true" title="PANACEA workflow" alt="PANACEA workflow"><figcaption aria-hidden="true">
+PANACEA workflow
+</figcaption></figure><div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>You can install the latest release version of PANACEA from CRAN via:</p>
@@ -107,7 +106,7 @@
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"PANACEA"</span><span class="op">)</span></span></code></pre></div>
 <p>You can install the development version of PANACEA from GitHub with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
+<code class="sourceCode R"><span><span class="co"># install.packages("devtools") @ if you don't have devtools installed</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"egeulgen/PANACEA"</span>, build_vignettes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
