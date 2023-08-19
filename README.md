@@ -29,8 +29,12 @@ PANACEA: network-based methods for pharmacotherapy prioritization in
 personalized oncology. Bioinformatics. 2023 Jan 1;39(1):btad022.
 <https://doi.org/10.1093/bioinformatics/btad022>*
 
-![PANACEA
-workflow](https://github.com/egeulgen/PANACEA/blob/master/inst/extdata/workflow.png?raw=true "PANACEA workflow")
+<figure>
+<img
+src="https://github.com/egeulgen/PANACEA/blob/master/inst/extdata/workflow.png?raw=true"
+title="PANACEA workflow" alt="PANACEA workflow" />
+<figcaption aria-hidden="true">PANACEA workflow</figcaption>
+</figure>
 
 ## Installation
 
@@ -43,7 +47,7 @@ install.packages("PANACEA")
 You can install the development version of PANACEA from GitHub with:
 
 ``` r
-# install.packages("devtools")
+# install.packages("devtools") @ if you don't have devtools installed
 devtools::install_github("egeulgen/PANACEA", build_vignettes = TRUE)
 ```
 
