@@ -34,7 +34,7 @@
 #'   gene_symbol = c("TP53", "EGFR", "KDR", "ATM"),
 #'   driverness_prob = c(0.94, 0.92, 0.84, 0.72)
 #' )
-#' toy_interactions <- DGIdb_interactions_df[1:50, ]
+#' toy_interactions <- DGIdb_interactions_df[1:25, ]
 #' res <- score_drugs(
 #'   driveR_res = toy_data,
 #'   drug_interactions_df = toy_interactions, # leave blank for default
