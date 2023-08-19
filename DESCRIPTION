@@ -1,6 +1,6 @@
 Package: PANACEA
 Title: Personalized Network-Based Anti-Cancer Therapy Evaluation
-Version: 1.0.1
+Version: 1.0.1.9000
 Authors@R: 
     person(given = "Ege",
            family = "Ulgen",

@@ -1,3 +1,5 @@
+# PANACEA (development version)
+
 # PANACEA 1.0.1
 ## Minor Chaanges
 - Added a `NEWS.md` file to track changes to the package.
