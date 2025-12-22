@@ -8,7 +8,7 @@
 ## Citation
 
 Source:
-[`inst/CITATION`](https://github.com/egeulgen/PANACEA/blob/v1.1.0/inst/CITATION)
+[`inst/CITATION`](https://github.com/egeulgen/PANACEA/blob/master/inst/CITATION)
 
 Ulgen E, Ozisik O, Sezerman OU. PANACEA: network-based methods for
 pharmacotherapy prioritization in personalized oncology. Bioinformatics.

@@ -1,5 +1,7 @@
 # Changelog
 
+## PANACEA (development version)
+
 ## PANACEA 1.1.0
 
 CRAN release: 2025-12-22
