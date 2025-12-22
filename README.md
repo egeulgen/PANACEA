@@ -10,7 +10,7 @@
 coverage](https://codecov.io/gh/egeulgen/PANACEA/branch/master/graph/badge.svg)](https://app.codecov.io/gh/egeulgen/PANACEA?branch=master)
 [![CRAN
 version](http://www.r-pkg.org/badges/version-ago/PANACEA)](https://cran.r-project.org/package=PANACEA)
-[![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/mit/)
+[![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/mit)
 <!-- badges: end -->
 
 Identification of the most appropriate pharmacotherapy for each patient
