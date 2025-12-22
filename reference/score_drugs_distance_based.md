@@ -1,0 +1,70 @@
+# Distance-based Scoring of Drugs
+
+Distance-based Scoring of Drugs
+
+## Usage
+
+``` r
+score_drugs_distance_based(
+  driveR_res,
+  drug_interactions_df,
+  W_mat,
+  driver_prob_cutoff = 0.05,
+  drug_name_col = "drug_name",
+  target_col = "gene_name",
+  verbose = TRUE
+)
+```
+
+## Arguments
+
+- driveR_res:
+
+  data frame of driveR results
+
+- drug_interactions_df:
+
+  data frame of drug-gene interactions
+
+- W_mat:
+
+  adjacency matrix for the PIN
+
+- driver_prob_cutoff:
+
+  cut-off value for 'driverness_prob' (default = 0.05)
+
+- drug_name_col:
+
+  for 'drug_interactions_df', the column name containing drug
+  names/identifiers
+
+- target_col:
+
+  for 'drug_interactions_df', the column name containing target gene
+  symbols
+
+- verbose:
+
+  boolean to control verbosity (default = `TRUE`)
+
+## Value
+
+vector of scores per drug. Drugs with the same target gene(s) are merged
+(via
+[`process_drug_target_interactions`](https://egeulgen.github.io/PANACEA/reference/process_drug_target_interactions.md))
+
+## Examples
+
+``` r
+toy_data <- data.frame(
+  gene_symbol = c("TP53", "EGFR", "KDR", "ATM"),
+  driverness_prob = c(0.94, 0.92, 0.84, 0.72)
+)
+toy_interactions <- DGIdb_interactions_df[1:100, ]
+res <- score_drugs_distance_based(
+  driveR_res = toy_data,
+  drug_interactions_df = toy_interactions,
+  W_mat = toy_W_mat, verbose = FALSE
+)
+```
