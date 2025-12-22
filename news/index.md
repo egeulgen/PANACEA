@@ -2,6 +2,8 @@
 
 ## PANACEA 1.1.0
 
+CRAN release: 2025-12-22
+
 ### Minor Changes and Bug Fixes
 
 - Moved `org.Hs.eg.db` from “Imports” to “Suggests” per new CRAN policy,
