@@ -1,6 +1,6 @@
 # Changelog
 
-## PANACEA (development version)
+## PANACEA 1.1.0
 
 ### Minor Changes and Bug Fixes
 
