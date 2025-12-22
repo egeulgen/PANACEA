@@ -34,6 +34,15 @@ add_drugs_as_nodes <- function(W_mat, drug_target_interactions, edge_weight = 10
 #'
 #' @return vector of converted gene symbols (if any alias in target genes)
 convert2alias <- function(input_genes, target_genes) {
+
+  if (!requireNamespace("org.Hs.eg.db", quietly = TRUE)) {
+    message(
+      "Package 'org.Hs.eg.db' is not installed; returning input genes unchanged."
+    )
+    return_genes <- ifelse(input_genes %in% target_genes, input_genes, "NOT_FOUND")
+    return(return_genes)
+  }
+
   missing_genes <- input_genes[!input_genes %in% target_genes]
   nonmissing_genes <- input_genes[input_genes %in% target_genes]
 

@@ -1,10 +1,16 @@
 test_that("`convert2alias()` works as expected", {
+  input_genes <- c("IDH1", "ERK1", "NONGENE")
+  if (requireNamespace("org.Hs.eg.db", quietly = TRUE)) {
+    expected_genes <- c("IDH1", "MAPK3", "NOT_FOUND")
+  } else {
+    expected_genes <- c("IDH1", "NOT_FOUND", "NOT_FOUND")
+  }
   expect_equal(
     PANACEA:::convert2alias(
-      input_genes = c("IDH1", "ERK1", "NONGENE"),
+      input_genes = input_genes,
       target_genes = c("IDH1", "MAPK3")
     ),
-    c("IDH1", "MAPK3", "NOT_FOUND")
+    expected_genes
   )
 })
 
@@ -28,7 +34,7 @@ test_that("`process_drug_target_interactions()` works as expected", {
   genes <- c("IDH1", "MAPK3", "TP53", "KRAS")
   tmp_interactions_df <- data.frame(
     drug_name = c("D1", "D1", "D2", "D3"),
-    gene_name = c("ERK1", "TP53", "IDH1", "ERK1")
+    gene_name = c("MAPK3", "TP53", "IDH1", "KRAS")
   )
 
   expect_type(res <- PANACEA:::process_drug_target_interactions(tmp_interactions_df, genes), "list")
